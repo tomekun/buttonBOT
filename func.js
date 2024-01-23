@@ -1,12 +1,18 @@
 const fs = ("fs")
 const {
-    REST,
-    Routes,
-    Collection,
-    Client,
-  } = require("discord.js");
+  REST,
+  Routes,
+  Collection,
+  Client,
+  GatewayIntentBits,
+} = require("discord.js");
 
-const client = new Client();
+const client = new Client({
+intents: [
+  GatewayIntentBits.GuildMembers,
+  GatewayIntentBits.Guilds,
+]
+});
 const {clientId} = require('./config.json')
 
 function register() {
