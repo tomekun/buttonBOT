@@ -1,5 +1,5 @@
-const fs = ("node:fs")
-const path = ("node:path")
+const fs = require('fs');
+const path = require('path');
 const {
     REST,
     Routes,
@@ -55,8 +55,11 @@ function register() {
   }
 
 function loadButtonData() {
+  try{
   const data = fs.readFileSync('./data/buttonData.json', 'utf8');
+  
   return JSON.parse(data);
+  }catch(e){console.log("データが存在しません")}
 }
 
 
