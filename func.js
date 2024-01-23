@@ -1,17 +1,18 @@
-const fs = ("fs")
+const fs = ("node:fs")
+const path = ("node:path")
 const {
-  REST,
-  Routes,
-  Collection,
-  Client,
-  GatewayIntentBits,
-} = require("discord.js");
+    REST,
+    Routes,
+    Collection,
+    Client,
+    GatewayIntentBits,
+  } = require("discord.js");
 
 const client = new Client({
-intents: [
-  GatewayIntentBits.GuildMembers,
-  GatewayIntentBits.Guilds,
-]
+  intents: [
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.Guilds,
+  ]
 });
 const {clientId} = require('./config.json')
 
@@ -53,12 +54,13 @@ function register() {
     }
   }
 
-  function loadButtonData() {
-    const data = fs.readFileSync('./data/buttonData.json', 'utf8');
-    return JSON.parse(data);
-  }
-  
-  module.exports = {
-    register,
-    loadButtonData,
-  }
+function loadButtonData() {
+  const data = fs.readFileSync('./data/buttonData.json', 'utf8');
+  return JSON.parse(data);
+}
+
+
+module.exports = {
+  register,
+  loadButtonData,
+}
