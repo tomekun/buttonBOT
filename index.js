@@ -3,6 +3,7 @@ const path = require('path');
 const server = require('./server.js'); 
 const buttonkit = require('./button.js')
 const func = require('./func.js')
+require('dotenv').config();
 server.Server();
 
 
