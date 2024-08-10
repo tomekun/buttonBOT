@@ -1,6 +1,6 @@
 ntsre表記について
 
-NTSRとはName　Type SendMessage Role ephemeralの略
+NTSREとはName　Type SendMessage Role ephemeralの略
 ボタンを作るときに用いる特殊な表記方法。
 各要素をエクスクラメーションマーク(!のこと。半角が条件)で区切る必要がある
 
